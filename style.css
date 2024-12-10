@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/BG.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center; 
+}
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url(../images/BG.jpg); 
+        background-size: contain; 
+    }
+}
+
+/* Dekorasi untuk teks "My Name Is" */
+.pre-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff9800; /* Warna teks */
+    text-align: center;
+    text-transform: uppercase; 
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.pre-title::after {
+    content: "";
+    display: block;
+    width: 60px; 
+    height: 4px; 
+    background-color: #ff9800; 
+    margin: 0.5rem auto 0;
+    border-radius: 2px; 
+}
+
+/* Dekorasi untuk "My Works" dan "Learning Path" */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #232e35;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    text-transform: capitalize; /* Mengatur huruf kapital di setiap kata */
+}
+
+.section-title::before {
+    content: "";
+    display: block;
+    width: 80px; /* Lebar garis dekorasi */
+    height: 4px; /* Tinggi garis dekorasi */
+    background-color: #232e35; /* Warna garis dekorasi */
+    margin: 0 auto 1rem;
+    border-radius: 2px; /* Membuat ujung garis membulat */
+}
+
+
+/* Logo */
+.navbar .nav-menu .logo a {
+    display: center;
+    width: 10px; /* Lebar logo */
+    height: 10px; /* Tinggi logo */
+    color: #fff;
+    font-size: 15px; /* Ukuran teks di dalam logo */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    background-color: #ff9800; /* Warna latar belakang logo */
+    border-radius: 50%; /* Membuat bentuk logo menjadi bulat */
+    display: fixed;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar .nav-menu .logo a:hover {
+    color: blueviolet; /* Warna logo saat hover */
+}
+
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #232e35;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.navbar .nav-menu li {
+    margin: 0;
+}
+
+.navbar .nav-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.navbar .nav-menu li a:hover {
+    color: #ff9800;
+}
+
+/* Social Styles */
+.social {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #ff9800;
+    transition: color 0.3s;
+}
+
+.social a:hover {
+    color: #fff;
+}
+
+
+/* Burger Menu */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.burger div {
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Responsive Design untuk Layar Kecil */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: flex-start; 
+    }
+
+    .nav-menu li {
+        margin-left: 0; 
+        margin-bottom: 1rem;
+    }
+
+    .burger {
+        display: flex; 
+    }
+
+    .nav-menu a {
+        font-size: 1.2rem; 
+        padding: 15px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-menu a {
+        font-size: 1rem; 
+    }
+}
+
+
+/* Nabila Section */
+#nabila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.nabila-left {
+    flex: 1;
+}
+
+.nabila-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    color: blueviolet;
+    text-align: center;
+}
+
+.nabila-left p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color: white;
+    text-align: center;
+}
+
+.nabila-right {
+    flex: 1;
+}
+
+.nabila-right img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Portfolio Section */
+#portfolio {
+    padding: 4rem 0;
+    background-color: rgb(217, 188, 244);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    color: #232e35;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.portfolio-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+    color: #656d72;
+    margin-top: 1rem;
+}
+
+.portfolio-item .portfolio-title {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #232e35;
+    font-weight: 600;
+}
+
+/* Skills Section */
+#skills {
+    padding: 3rem 0;
+    background: rgb(217, 188, 244);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    justify-content: space-between;
+}
+
+.skills-description {
+    flex: 1;
+}
+
+.skills-description h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #232e35;
+}
+
+.skills-description ul {
+    list-style: none;
+}
+
+.skills-description li {
+    font-size: 1.2rem;
+    color: #656d72;
+    margin: 0.5rem 0;
+}
+
+/* Education Section */
+.education {
+    display: flex;
+    gap: 1rem;
+}
+
+.education .line {
+    padding: 0 .7rem;
+}
+
+.education .line div {
+    width: 2px;
+    height: 100%;
+    background: #626262;
+    position: relative;
+}
+
+.education-info {
+    margin: .6rem 0 1.4rem;
+}
+
+.education-years {
+    margin-bottom: 3rem;
+}
+
+.education .line div:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: #626262;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu li {
+        margin-bottom: 1rem;
+    }
+
+    #nabila {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nabila-right img {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .portfolio-item img {
+        height: 250px; 
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
